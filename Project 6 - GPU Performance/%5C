@@ -1,0 +1,12 @@
+#!/bin/bash
+
+make reduction
+rm -f Reduction.txt
+touch Reduction.txt
+
+#./a.out local_size global_size
+echo "Starting..."
+./reduction 32 1048576 >> Reduction.txt #2^20
+./reduction 32 2097152 >> Reduction.txt #2^21
+./reduction 32 4194304 >> Reduction.txt #2^22
+./reduction 32 8388608 >> Reduction.txt #2^23

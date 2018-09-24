@@ -1,0 +1,28 @@
+#!/bin/bash
+
+make addMult
+rm -f ArrayAddMult.txt
+touch ArrayAddMult.txt
+
+#./a.out local_size global_size
+echo "Starting..."
+./addMult 1 1024 >> ArrayAddMult.txt    #2^10
+./addMult 1 8192 >> ArrayAddMult.txt    #2^13
+./addMult 1 1048576 >> ArrayAddMult.txt #2^20
+./addMult 1 8388608 >> ArrayAddMult.txt #2^23
+echo "(1/4)"
+./addMult 256 1024 >> ArrayAddMult.txt
+./addMult 256 8192 >> ArrayAddMult.txt
+./addMult 256 1048576 >> ArrayAddMult.txt
+./addMult 256 8388608 >> ArrayAddMult.txt
+echo "(2/4)"
+./addMult 512 1024 >> ArrayAddMult.txt
+./addMult 512 8192 >> ArrayAddMult.txt
+./addMult 512 1048576 >> ArrayAddMult.txt
+./addMult 512 8388608 >> ArrayAddMult.txt
+echo "(3/4)"
+./addMult 1024 1024 >> ArrayAddMult.txt
+./addMult 1024 8192 >> ArrayAddMult.txt
+./addMult 1024 1048576 >> ArrayAddMult.txt
+./addMult 1024 8388608 >> ArrayAddMult.txt
+echo "(4/4)"

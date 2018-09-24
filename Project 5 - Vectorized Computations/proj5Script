@@ -1,0 +1,38 @@
+#!/bin/bash
+
+make novec
+make withvec
+
+./novec 1 1000 1000
+./novec 2 1000 1000
+./novec 4 1000 1000
+
+./novec 1 100000 1000
+./novec 2 100000 1000
+./novec 4 100000 1000
+
+./novec 1 30000000 100
+./novec 2 30000000 100
+./novec 4 30000000 100
+
+./novec 1 64000000 100
+./novec 2 64000000 100
+./novec 4 64000000 100
+
+./withvec 1 1000 1000
+./withvec 2 1000 1000
+./withvec 4 1000 1000
+
+./withvec 1 100000 1000
+./withvec 2 100000 1000
+./withvec 4 100000 1000
+
+./withvec 1 30000000 100
+./withvec 2 30000000 100
+./withvec 4 30000000 100
+
+./withvec 1 64000000 100
+./withvec 2 64000000 100
+./withvec 4 64000000 100
+
+echo "------------------------Finished-------------------------"
